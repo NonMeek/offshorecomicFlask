@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/Style.css') }}">
+<script src="{{ url_for('static', filename='js/myscripts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+</head>
+<body class="m-scene" onload="init()">
+<img src="{{ url_for('static', filename='images/image1.jpg') }}" width="1240" height="877" alt=""/>
+	<header>
+		<nav>
+			<ul class="navigation">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="About.html">ABOUT</a></li>
+				<li class="dropdown">
+					<button class="dropbtn" onClick="myFunction()">FOLLOW</button>
+					<div class="dropdown-content" id="myDropdown">
+						<a href="https://twitter.com/NonMeek">Twitter</a>
+						<a href="https://twitter.com/NonMeek">Glitter</a>
+						<a href="https://twitter.com/NonMeek">Quitter</a>
+					</div>
+				<li><a href="#Contact.html">CONTACT</a></li>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="spaceS"></div>
+	<div class="flex-container">
+		<div class="flex-item1"></div>
+		<div class="flex-item2">
+			<h1 class="h1">Today's Offshorecomic</h1>
+			<img src="{{ url_for('static', filename='images/Strip1.PNG') }}" id="Strip" width="800" height="275" alt=""/>
+			<div class="spaceS"></div>
+			<div class="flex-container">
+				<div class="flex-item1"></div>
+				<div class="flex-item2">
+				<button class="button" onClick="Last();">&lsaquo;&lsaquo;</button>
+				<button class="button" onClick="Prev();">&lsaquo;</button>
+				<button class="button" onClick="Rand();">?</button>
+				<button class="button" onClick="Next();">&rsaquo;</button>
+				<button class="button" onClick="Frst();">&rsaquo;&rsaquo;</button>
+				<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+			<div class="flex-item3"></div>	
+			</div>
+		</div>
+		<div class="flex-item3"></div>
+	</div>
+	<div class="spaceL"></div>
+	<footer class="footer" href="#">&COPY; Stefan Gasic, All Rights Reserved</footer>
+</body>
+</html>
